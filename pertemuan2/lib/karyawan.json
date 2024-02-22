@@ -1,0 +1,24 @@
+[
+    {
+        "nama": "Moza Setiawan",
+        "umur" : 50,
+        "alamat" : {
+            "jalan": "Bukit Tinggi jalan rusak",
+            "kota": "Palembang",
+            "provinsi": "Sumatera Selatan"
+        },
+        "hobi": ["Rebahan", "Makan", "Tidur"]
+
+    },
+    {
+        "nama": "Maharuf Kurniawan",
+        "umur" : 55,
+        "alamat" : {
+            "jalan": "Kalidoni No.7 Blok O",
+            "kota": "Palembang",
+            "provinsi": "Sumatera Selatan"
+        },
+        "hobi": ["Memancing", "Makan", "Bermain"]
+    }
+
+]
