@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Movie {
   final int id;
   final String title;
@@ -27,6 +25,6 @@ class Movie {
         posterpath: json["poster_path"],
         backdropPath: json['poster_path'],
         releaseDate: json['release_date'],
-        voteAverage: double.parse(json['vote_average']));
+        voteAverage: json['vote_average'].toDouble());
   }
 }
