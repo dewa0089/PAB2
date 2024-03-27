@@ -1,6 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 
-class shopping_services {
+class ShoppingService {
   final DatabaseReference _database =
       FirebaseDatabase.instance.ref().child('shopping_list');
 
@@ -10,9 +10,9 @@ class shopping_services {
       DataSnapshot snapshot = event.snapshot;
       print('Snapshot data: ${snapshot.value}');
 
-      if (snapshot.value != null){
+      if (snapshot.value != null) {
         Map<dynamic, dynamic> values = snapshot.value as Map<dynamic, dynamic>;
-        values.forEach((key, value){
+        values.forEach((key, value) {
           items[key] = value['name'] as String;
         });
       }
@@ -20,10 +20,11 @@ class shopping_services {
     });
   }
 
-  void addShoppingList(String itemName){
-    _database.push().set({'name' : itemName});
+  void addShoppingList(String itemName) {
+    _database.push().set({'name': itemName});
   }
-  Future<void> removeShoppingItem(String key) async{
+
+  Future<void> removeShoppingItem(String key) async {
     await _database.child(key).remove();
   }
 }
